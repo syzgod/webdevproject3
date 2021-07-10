@@ -4,17 +4,25 @@ body {
   font-family: Kumbh Sans, sans-serif;
   background-color: hsl(185, 75%, 39%);
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  padding: 1rem;
+  min-height: 100vh;
+  background-image: url(/images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
-  width: 25rem;
-  position: fixed;
+  justify-content: center;
+  align-content: center;
+  width: 30rem;
   background-color: white;
-  aspect-ratio: 1 / 1;
   margin: auto;
-  inset: 0;
   border-radius: 20px;
   text-align: center;
   box-shadow: 15px 15px 10rem black;
@@ -26,21 +34,47 @@ body {
   margin-top: -60px;
 }
 
+.profile-data {
+  display: inline-flex;
+  justify-content: center;
+  margin: 20px;
+}
+
 .name {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.location {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .numbers-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 50px 20px 20px 20px;
+  padding-top: 30px;
+  padding-left: 0;
+  border-top: 2px solid lightgrey;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
 }
 
 .numbers {
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: black;
+}
+
+.number-names {
+  font-size: 1rem;
 }
 
 .top-background {
@@ -48,11 +82,51 @@ body {
   border-radius: 20px 20px 0 0;
 }
 
-.profile-date {
-  display: flex;
-  flex: 1;
-}
-
+span,
 div.greytext {
   color: hsl(0, 0%, 59%);
+}
+
+span {
+  font-weight: lighter;
+  margin: 5px;
+}
+
+@media screen and (max-width: 532px) {
+  .card-container {
+    max-width: 90%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .card-container {
+    max-width: 90%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .card-container {
+    height: 66%;
+  }
+
+  .numbers-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .location {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 220px) {
+  .victor-pic {
+    width: 40%;
+  }
+
+  .card-container {
+    height: 55%;
+  }
 }
