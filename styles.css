@@ -11,8 +11,14 @@ body {
   margin: auto;
   padding: 1rem;
   min-height: 100vh;
-  background-image: url(/images/bg-pattern-top.svg);
-  background-repeat: no-repeat;
+}
+
+.bg-top {
+  background-image: url(/images/bg-pattern-top.svg) no-repeat;
+  min-height: 100vh;
+  position: absolute;
+  z-index: -1;
+  transform: translate(-50%, -50%);
 }
 
 .card-container {
@@ -25,7 +31,7 @@ body {
   margin: auto;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 15px 15px 10rem black;
+  box-shadow: 10px 10px 20rem black;
 }
 
 .victor-pic {
