@@ -11,14 +11,10 @@ body {
   margin: auto;
   padding: 1rem;
   min-height: 100vh;
-}
-
-.bg-top {
-  background-image: url(/images/bg-pattern-top.svg) no-repeat;
-  min-height: 100vh;
-  position: absolute;
-  z-index: -1;
-  transform: translate(-50%, -50%);
+  background-image: url(/images/bg-pattern-top.svg),
+    url(/images/bg-pattern-bottom.svg);
+  background-position: bottom 50vh right 50vw, top 50vh left 50vw;
+  background-repeat: no-repeat;
 }
 
 .card-container {
